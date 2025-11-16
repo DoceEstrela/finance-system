@@ -208,6 +208,64 @@ function MaterialPurchases() {
         </table>
       </div>
 
+      {/* Mobile Cards */}
+      <div className="purchases-cards-container">
+        {purchases.length > 0 ? (
+          purchases.map((purchase) => (
+            <div key={purchase._id} className="purchases-card">
+              <div className="purchases-card-header">
+                <h3 className="purchases-card-material">
+                  {purchase.material?.name || 'N/A'}
+                </h3>
+                <span className="purchases-card-date">
+                  {formatDate(purchase.purchaseDate)}
+                </span>
+              </div>
+              {purchase.material?.category && (
+                <div className="purchases-card-item purchases-card-category">
+                  <span className="purchases-card-label">Categoria:</span>
+                  <span className="purchases-card-value">{purchase.material.category}</span>
+                </div>
+              )}
+              <div className="purchases-card-body">
+                <div className="purchases-card-item">
+                  <span className="purchases-card-label">Quantidade:</span>
+                  <span className="purchases-card-value">
+                    {purchase.quantity} {purchase.material?.unit || ''}
+                  </span>
+                </div>
+                <div className="purchases-card-item">
+                  <span className="purchases-card-label">Preço Unitário:</span>
+                  <span className="purchases-card-value">{formatCurrency(purchase.unitPrice)}</span>
+                </div>
+                <div className="purchases-card-item">
+                  <span className="purchases-card-label">Total:</span>
+                  <span className="purchases-card-value">
+                    <strong>{formatCurrency(purchase.totalCost)}</strong>
+                  </span>
+                </div>
+                {purchase.supplier && (
+                  <div className="purchases-card-item">
+                    <span className="purchases-card-label">Fornecedor:</span>
+                    <span className="purchases-card-value">{purchase.supplier}</span>
+                  </div>
+                )}
+                {purchase.purchasedBy?.name && (
+                  <div className="purchases-card-item">
+                    <span className="purchases-card-label">Comprado Por:</span>
+                    <span className="purchases-card-value">{purchase.purchasedBy.name}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))
+        ) : (
+          <div className="purchases-empty-state">
+            Nenhuma compra registrada
+          </div>
+        )}
+      </div>
+
       <Modal
         isOpen={isModalOpen}
         onClose={() => {

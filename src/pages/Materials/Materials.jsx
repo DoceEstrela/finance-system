@@ -311,6 +311,94 @@ function Materials() {
         </table>
       </div>
 
+      {/* Mobile Cards */}
+      <div className="materials-cards-container">
+        {materials.length > 0 ? (
+          materials.map((material) => {
+            const stockStatus = getStockStatus(material)
+            const totalValue = material.costPerUnit * material.quantityInStock
+
+            return (
+              <div key={material._id} className="materials-card">
+                <div className="materials-card-header">
+                  <h3 className="materials-card-name">{material.name}</h3>
+                  <span className={`category-badge category-${material.category}`}>
+                    {categories[material.category] || material.category}
+                  </span>
+                </div>
+                {material.description && (
+                  <div className="materials-card-description">
+                    {material.description}
+                  </div>
+                )}
+                <div className="materials-card-body">
+                  <div className="materials-card-item">
+                    <span className="materials-card-label">Custo/Unidade:</span>
+                    <span className="materials-card-value">{formatCurrency(material.costPerUnit)}</span>
+                  </div>
+                  <div className="materials-card-item">
+                    <span className="materials-card-label">Estoque:</span>
+                    <span className={`materials-card-value stock-status stock-${stockStatus}`}>
+                      {material.quantityInStock} {units[material.unit]}
+                      {material.minimumStock > 0 && (
+                        <small> (mín: {material.minimumStock})</small>
+                      )}
+                    </span>
+                  </div>
+                  <div className="materials-card-item">
+                    <span className="materials-card-label">Unidade:</span>
+                    <span className="materials-card-value">{units[material.unit]}</span>
+                  </div>
+                  <div className="materials-card-item">
+                    <span className="materials-card-label">Valor Total:</span>
+                    <span className="materials-card-value">{formatCurrency(totalValue)}</span>
+                  </div>
+                  {material.supplier && (
+                    <div className="materials-card-item">
+                      <span className="materials-card-label">Fornecedor:</span>
+                      <span className="materials-card-value">{material.supplier}</span>
+                    </div>
+                  )}
+                </div>
+                {canEdit && (
+                  <div className="materials-card-actions">
+                    <button
+                      className="btn-buy"
+                      onClick={() => {
+                        navigate('/material-purchases', {
+                          state: { selectedMaterial: material._id }
+                        })
+                      }}
+                      title="Comprar mais deste material"
+                    >
+                      Comprar
+                    </button>
+                    <button
+                      className="btn-edit"
+                      onClick={() => handleEdit(material)}
+                    >
+                      Editar
+                    </button>
+                    {user?.role === 'admin' && (
+                      <button
+                        className="btn-delete"
+                        onClick={() => handleDelete(material._id)}
+                      >
+                        Excluir
+                      </button>
+                    )}
+                  </div>
+                )}
+              </div>
+            )
+          })
+        ) : (
+          <div className="materials-empty-state">
+            Nenhum material encontrado
+          </div>
+        )}
+      </div>
+
       <Modal
         isOpen={isModalOpen}
         onClose={() => {
