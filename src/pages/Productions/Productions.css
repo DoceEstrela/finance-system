@@ -1,0 +1,294 @@
+/* ========== PRODUCTIONS PAGE - ESTILOS ESPECÍFICOS ========== */
+.productions-page {
+  width: 100%;
+  max-width: 100%;
+}
+
+.productions-empty-state {
+  background: #202225;
+  padding: 2rem;
+  border-radius: 4px;
+  text-align: center;
+  color: #FFFFFF;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.productions-empty-state p {
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.empty-hint {
+  margin-top: 1rem !important;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.productions-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.production-card {
+  background: #202225;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  overflow: hidden;
+}
+
+.production-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  gap: 1rem;
+}
+
+.production-card-header:hover {
+  background: #2F3136;
+}
+
+.production-card-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.production-batch-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1E4FA1;
+}
+
+.production-date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+.production-card-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.production-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.production-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+.summary-value {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-width: 120px;
+  text-align: right;
+}
+
+.summary-value.cost {
+  color: #fbbf24;
+}
+
+.summary-value.quantity {
+  color: #38a169;
+}
+
+.summary-value.cost-per-unit {
+  color: #1E4FA1;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.production-toggle {
+  color: #1E4FA1;
+  font-size: 1rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.production-details {
+  padding: 1rem;
+  background: #2F3136;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.production-section {
+  margin-bottom: 1.5rem;
+}
+
+.production-section:last-child {
+  margin-bottom: 0;
+}
+
+.production-section h4 {
+  margin: 0 0 0.75rem 0;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.materials-list,
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.material-item,
+.product-item {
+  background: #202225;
+  padding: 0.75rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.material-item-info,
+.product-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.material-item-info strong,
+.product-item-info strong {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.material-item-info span,
+.product-description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+}
+
+.material-item-details,
+.product-item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.material-item-details span,
+.product-item-details span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+}
+
+.material-cost {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.material-total-cost {
+  color: #fbbf24 !important;
+  font-weight: 700;
+  font-size: 0.875rem !important;
+}
+
+.product-quantity {
+  color: #38a169 !important;
+  font-weight: 600;
+}
+
+.product-cost-price {
+  color: #fbbf24 !important;
+}
+
+.product-sale-price {
+  color: #1E4FA1 !important;
+  font-weight: 600;
+}
+
+.no-items {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+  background: #202225;
+  border-radius: 4px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 767px) {
+  .production-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .production-card-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .production-summary {
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .production-summary-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .summary-value {
+    min-width: auto;
+    text-align: right;
+  }
+
+  .material-item,
+  .product-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .material-item-details,
+  .product-item-details {
+    width: 100%;
+    align-items: flex-start;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .productions-list {
+    grid-template-columns: 1fr;
+  }
+
+  .production-summary {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .materials-list,
+  .products-list {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,563 @@
+/* ========== MATERIAL WITHDRAWALS PAGE - ESTILOS ESPECÍFICOS ========== */
+.material-withdrawals-page {
+  width: 100%;
+  max-width: 100%;
+}
+
+.page-subtitle {
+  color: #FFFFFF;
+  margin: 0.375rem 0 1rem 0;
+  font-size: 0.875rem;
+}
+
+/* Cards de Resumo */
+.withdrawals-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.summary-card {
+  background: #202225;
+  background-color: #202225;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgb(61, 65, 73);
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.11);
+  box-sizing: border-box;
+}
+
+.summary-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.summary-value {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.withdrawals-table-container {
+  background: #202225;
+  background-color: #202225;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(128, 128, 128, 0.15);
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.withdrawals-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #202225;
+  min-width: 600px;
+}
+
+.withdrawals-data-table thead {
+  background: linear-gradient(135deg, #1E4FA1 0%, #1a3d8a 100%);
+  border-radius: 4px 4px 0 0;
+}
+
+.withdrawals-data-table th {
+  padding: 0.75rem;
+  text-align: left;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+}
+
+.withdrawals-data-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.11);
+  color: #FFFFFF;
+  background: #202225;
+  font-size: 0.875rem;
+}
+
+.withdrawals-data-table tbody tr:hover {
+  background: #2F3136;
+  transform: translateX(2px);
+  box-shadow: inset 3px 0 0 #1E4FA1;
+}
+
+.reason-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #36393F;
+  color: #FFFFFF;
+}
+
+.text-muted {
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+}
+
+/* Seção de Produções */
+.productions-summary {
+  background: #202225;
+  background-color: #202225;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.productions-summary h3 {
+  margin: 0 0 0.75rem 0;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.productions-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.production-item {
+  background: #2F3136;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.11);
+}
+
+.production-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #202225;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.production-header:hover {
+  background: #2F3136;
+}
+
+.production-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.production-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.production-batch {
+  font-weight: 600;
+  color: #1E4FA1;
+  font-size: 0.875rem;
+}
+
+.production-date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+}
+
+.production-items {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+}
+
+.production-total {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  min-width: 100px;
+  text-align: right;
+}
+
+.production-toggle {
+  color: #1E4FA1;
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+.production-details-expanded {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #2F3136;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.11);
+}
+
+.production-materials-list h4 {
+  margin: 0 0 0.75rem 0;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.production-material-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #202225;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.material-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.material-item-info strong {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.material-item-category {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+}
+
+.material-item-quantity {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.material-item-unit-cost {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.material-item-total-cost {
+  text-align: right;
+}
+
+.material-item-total-cost strong {
+  color: #1E4FA1;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.production-summary-footer {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.11);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.production-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.production-summary-row span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.production-summary-row strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.production-final-total {
+  color: #1E4FA1 !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+.production-filter {
+  margin-bottom: 1rem;
+}
+
+.production-filter .filter-select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #36393F;
+  border-radius: 4px;
+  background: #202225;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  min-height: 40px;
+}
+
+.production-filter .filter-select:focus {
+  outline: none;
+  border-color: #1E4FA1;
+  box-shadow: 0 0 0 3px rgba(30, 79, 161, 0.15);
+}
+
+.production-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: rgba(30, 79, 161, 0.2);
+  color: #1E4FA1;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.production-batch-hint {
+  display: block;
+  margin-top: 0.375rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.production-batch-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.production-batch-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-production-today {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  background: #1E4FA1;
+  color: #FFFFFF;
+  border: 1px solid #1E4FA1;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.btn-production-today:hover {
+  background: #1a3d8a;
+  border-color: #1a3d8a;
+}
+
+.production-batch-select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #36393F;
+  border-radius: 4px;
+  background: #202225;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  min-height: 40px;
+}
+
+.production-batch-select:focus {
+  outline: none;
+  border-color: #1E4FA1;
+  box-shadow: 0 0 0 3px rgba(30, 79, 161, 0.15);
+}
+
+.production-batch-active {
+  display: block;
+  margin-top: 0.375rem;
+  color: #22c55e;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.production-batch-active strong {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 767px) {
+  .summary-card {
+    padding: 0.75rem;
+  }
+
+  .summary-value {
+    font-size: 1.25rem;
+  }
+
+  .withdrawals-table-container {
+    display: none;
+  }
+
+  .withdrawals-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .withdrawal-card {
+    background: #202225;
+    border-radius: 4px;
+    padding: 0.75rem;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .withdrawal-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.11);
+  }
+
+  .withdrawal-card-name {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+
+  .withdrawal-card-batch {
+    padding: 0.25rem 0.5rem;
+    background: rgba(30, 79, 161, 0.2);
+    color: #1E4FA1;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .withdrawal-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .withdrawal-card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+
+  .withdrawal-card-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+  }
+
+  .withdrawal-card-value {
+    color: #FFFFFF;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  .withdrawal-card-amount {
+    font-weight: 700;
+    color: #1E4FA1;
+    font-size: 0.875rem;
+  }
+
+  .withdrawal-card-reason {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background: #36393F;
+    color: #FFFFFF;
+  }
+
+  .withdrawals-empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .production-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .production-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .production-material-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .material-item-quantity,
+  .material-item-unit-cost,
+  .material-item-total-cost {
+    text-align: left;
+  }
+
+  .material-item-total-cost {
+    border-top: 1px solid rgba(128, 128, 128, 0.11);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .withdrawals-cards-container {
+    display: none;
+  }
+
+  .productions-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .production-filter .filter-select {
+    max-width: 400px;
+  }
+
+  .withdrawals-summary {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .summary-card {
+    padding: 1.5rem;
+  }
+
+  .summary-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .summary-value {
+    font-size: 1.8rem;
+  }
+}
+

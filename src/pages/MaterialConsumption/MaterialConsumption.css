@@ -1,0 +1,134 @@
+/* ========== MATERIAL CONSUMPTION PAGE - ESTILOS ESPECÍFICOS ========== */
+.material-consumption-page {
+  width: 100%;
+  max-width: 100%;
+}
+
+.report-form-container {
+  background: #25282d;
+  background-color: #25282d;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(128, 128, 128, 0.15);
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.report-results {
+  background: #202225;
+  background-color: #202225;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.report-results h2,
+.report-results h3 {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.consumption-stat-card {
+  background: #2F3136;
+  background-color: #2F3136;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #1E4FA1;
+  box-sizing: border-box;
+}
+
+.consumption-stat-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.consumption-table {
+  margin-top: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100%;
+}
+
+.data-table {
+  min-width: 500px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 767px) {
+  .report-form-container,
+  .report-results {
+    padding: 0.75rem;
+  }
+
+  .consumption-stat-card {
+    padding: 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .report-form-container {
+    padding: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .consumption-stat-card {
+    padding: 1.5rem;
+  }
+
+  .consumption-stat-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .stat-value {
+    font-size: 1.8rem;
+  }
+
+  .report-results {
+    padding: 1.5rem;
+  }
+
+  .report-results h2,
+  .report-results h3 {
+    font-size: 1.5rem;
+  }
+
+  .data-table {
+    min-width: 600px;
+  }
+}
