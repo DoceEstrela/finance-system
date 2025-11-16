@@ -29,7 +29,7 @@
   border: 1px solid rgba(128, 128, 128, 0.11);
   width: 100%;
   max-width: 600px;
-  max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(128, 128, 128, 0.08);
   animation: slideUp 0.3s;

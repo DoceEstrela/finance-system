@@ -1,6 +1,6 @@
 /* ========== LAYOUT PRINCIPAL ========== */
 .layout {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: row;
   background: #2F3136;
